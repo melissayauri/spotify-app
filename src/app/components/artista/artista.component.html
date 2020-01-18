@@ -36,7 +36,9 @@
           <td>{{itemArtist.album.name}}</td>
           <td>{{itemArtist.name}}</td>
           <td>
-            <audio [src]="itemArtist.preview_url" controls></audio>
+            <iframe [src]=" itemArtist.uri | domseguro" width="300" height="80" frameborder="0" allowtransparency="true"
+              allow="encrypted-media"></iframe>
+            <!-- <audio [src]="itemArtist.preview_url" controls></audio>-->
           </td>
         </tr>
       </tbody>
